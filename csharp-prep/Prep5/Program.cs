@@ -6,10 +6,10 @@ class Program
     {
         DisplayWelcome();
         string name = PromptUserName();
-        int age = PromptUserNumber();
+        int number = PromptUserNumber();
         int birthyear;
         PromtUserBirthYear(out birthyear);
-        int square = SquareNumber(age);
+        int square = SquareNumber(number);
         DisplayResult(name, square, birthyear);
 
 
