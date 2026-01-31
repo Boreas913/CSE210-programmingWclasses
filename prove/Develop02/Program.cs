@@ -79,6 +79,9 @@ public class Journal
             newEntry._prompt = parts[1];
             newEntry._response = parts[2];
             _entries.Add(newEntry);
+            Console.WriteLine();
+            Console.WriteLine($"{newEntry._date.ToShortDateString()} {newEntry._prompt}");
+            Console.WriteLine($"{newEntry._response}");
         }
     }
 }
@@ -98,6 +101,7 @@ class Program
             Console.WriteLine("5 Quit");
             Console.Write("> ");
             input = Console.ReadLine();
+            Console.WriteLine();
             if (input == "1" )
             {
                 journal.AddEntry();
