@@ -8,13 +8,11 @@ class Program
     {   
         Boolean quit = false;
         while(!quit){
+            //exceeding requirments: I have a list of multiple scriptures ths user can memorize
             Console.WriteLine("Pick a scripture to memorize from the list (enter the number or 'q' to quit)");
             Console.WriteLine("1. Proverbs 3:5-6");
             Console.WriteLine("2. John 3:16");
             Console.WriteLine("3. Mormon 5:23");
-//For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.
-//Trust in the LORD with all your heart and lean not on your own understanding; in all your ways acknowledge him, and he will make your paths straight.
-//Know ye not that ye are in the hands of God? Know ye not that he hath all power, and at his great command the earth shall be rolled together as a scroll?
             string input = Console.ReadLine();
             string text = "";
             string book = "";
