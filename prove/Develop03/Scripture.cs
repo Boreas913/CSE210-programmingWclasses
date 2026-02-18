@@ -35,7 +35,12 @@ public class Scripture
     public string GetDisplayText()
     {
         string reference = _reference.GetDisplayText();
-        return $"{reference} {string.Join(" ", _list.Select(w => w.GetDisplayText()))}";
+        List<string> scriptureText = new List<string>();
+        foreach (var w in _list)
+        {
+            scriptureText.Add(w.GetDisplayText()); 
+        }
+        return $"{reference} {string.Join(" ", scriptureText)}";
     }
 
     public Boolean IsWholeThingHidden()
