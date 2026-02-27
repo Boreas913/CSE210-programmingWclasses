@@ -1,6 +1,6 @@
 public class ListingActivity: Activity
 {
-    public List<string> _prompts = new List<string>
+    private List<string> _prompts = new List<string>
     {
         "Who are people that you appreciate?",
         "What are personal strengths of yours?",
@@ -8,7 +8,7 @@ public class ListingActivity: Activity
         "When have you felt the Holy Ghost this month?",
         "Who are some of your personal heroes?"
     };
-    public List<string> _entries = new List<string>();
+    private List<string> _entries = new List<string>();
     public ListingActivity() : base("Listing Activity", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.", 0)
     {
         
