@@ -6,6 +6,6 @@ public class Circle{
         }
 
     public override double GetArea(){
-        return Math.PI * _radius * radius;
+        return Math.PI * _radius * _radius;
     }
 }
