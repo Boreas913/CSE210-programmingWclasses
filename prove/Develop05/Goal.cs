@@ -10,7 +10,15 @@ public class Goal
         _description = description;
         _points = points;
     }
+    public string GetName()
+    {
+        return _name;
+    }
 
+    public int GetPoints()
+    {
+        return _points;
+    }
     public virtual void RecordEvent()
     {
         
@@ -21,7 +29,11 @@ public class Goal
     }
     public virtual string GetDetailsString()
     {
-        return $"{_name} ({_description})";
+        return "";
 
+    }
+    public virtual string GetStringRepresentation()
+    {
+        return $"{GetType().Name}:{_name},{_description},{_points}";
     }
 }
