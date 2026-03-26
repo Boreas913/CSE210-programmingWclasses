@@ -1,34 +1,7 @@
-// Write a program that has classes for Product, Customer, Address, and Order. 
-// The responsibilities of these classes are as follows:
-
-// Order
-// Contains a list of products and a customer. Can calculate the total cost of the order. 
-// Can return a string for the packing label. Can return a string for the shipping label.
-// The total price is calculated as the sum of the total cost of each product plus a one-time shipping cost.
-// This company is based in the USA. If the customer lives in the USA, then the shipping cost is $5. 
-// If the customer does not live in the USA, then the shipping cost is $35.
-// A packing label should list the name and product id of each product in the order.
-// A shipping label should list the name and address of the customer
-// Product
-// Contains the name, product id, price per unit, and quantity of each product.
-// The total cost of this product is computed by multiplying the price per unit and the quantity. If the price 
-// per unit was $3 and they bought 5, the product total cost would be $15.
-// Customer
-// The customer contains a name and an address.
-// The name is a string, but the Address is a class.
-// The customer should have a method that can return whether they live in the USA or not. 
-// (Hint this should call a method on the address to find this.)
-// Address
-// The address contains a string for the street address, the city, state/province, and country.
-// The address should have a method that can return whether it is in the USA or not.
-// The address should have a method to return a string all of its fields together in one string 
-// (with newline characters where appropriate)
-// Other considerations
-// Make sure that all member variables are private and getters, setters, and constructors are created as needed.
-
-// Once you have created these classes, write a program that creates at least two orders with a 2-3 products each. 
-// Call the methods to get the packing label, the shipping label, and the total price of the order, and display 
-// the results of these methods.
+// Once you have created these classes, write a program that creates 
+// at least two orders with a 2-3 products each. Call the methods to 
+// get the packing label, the shipping label, and the total price of 
+// the order, and display the results of these methods.
 
 using System;
 
@@ -36,6 +9,23 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Foundation2 World!");
+        Address address1 = new Address("5 Mill Race Rd", "Rexburg", "ID", "USA");
+        Customer customer1 = new Customer("Aurora", address1);
+        Order order1 = new Order(customer1);
+        Product product11 = new Product("Hairdryer", "4Df8903", 30, 2);
+        Product product12 = new Product("Haircream", "JL29385", 15, 5);
+        order1.AddProduct(product11);
+        order1.AddProduct(product12);
+        Console.WriteLine($"{order1.GetPackingLabel()}\n{order1.GetShippingLabel()}\n{order1.GetTotalCost()}");
+
+
+        Address address2 = new Address("856 East Old Fort Rd", "South Weber", "UT", "USA");
+        Customer customer2 = new Customer("Bob", address2);
+        Order order2 = new Order(customer2);
+        Product product21 = new Product("Waterbottle", "96357DH", 25, 2);
+        Product product22 = new Product("Jumprope", "IP203876", 8, 3);
+        order2.AddProduct(product21);
+        order2.AddProduct(product22);
+        Console.WriteLine($"{order2.GetPackingLabel()}\n{order2.GetShippingLabel()}\n{order2.GetTotalCost()}");
     }
 }
