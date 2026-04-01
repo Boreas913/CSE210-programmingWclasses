@@ -1,6 +1,6 @@
 class OutdoorEvent : Event
 {
-    string _weather;
+    private string _weather;
     public OutdoorEvent(string title, string description, string date, string time, Address address,
                             string weather): base(title, description, date, time, address)
     {

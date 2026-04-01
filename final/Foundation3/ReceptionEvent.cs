@@ -1,6 +1,6 @@
 class ReceptionEvent : Event
 {
-    string _rsvpEmail;
+    private string _rsvpEmail;
     public ReceptionEvent(string title, string description, string date, string time, Address address,
                  string rsvpEmail): base(title, description, date, time, address)
     {
