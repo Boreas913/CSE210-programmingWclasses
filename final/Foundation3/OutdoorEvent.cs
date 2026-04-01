@@ -1,0 +1,14 @@
+class OutdoorEvent : Event
+{
+    string _weather;
+    public OutdoorEvent(string title, string description, string date, string time, Address address,
+                            string weather): base(title, description, date, time, address)
+    {
+        _weather = weather;
+    }
+    public override string FullDetails()
+    {
+        string baseDetails = base.FullDetails();
+        return $"{baseDetails}\nWeather Forecast: {_weather}";
+    }
+}
